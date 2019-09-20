@@ -853,6 +853,7 @@
         width: 240px;
     }
     .logo-small-device {
+        margin-left: 10px;
         display: block;
     }
     .slider-content {
@@ -1364,7 +1365,7 @@
      display: none;
     }
     .icon-cart {
-     padding: 7px 12px 4px;
+     padding: 5px 16px 4px;
     }  
     .header-cart.cart-small-device {
      display: block;
