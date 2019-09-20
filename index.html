@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Cold's Portfolio</title>
+	<meta name="description" content="Small Portfolio by cold" />
+	<meta name="keywords" content="Animation, ThreeJs, WEBGL, FLEX, GRID, HTML5, JS" />
+	<meta name="author" content="Coldestheart" />
+	<link rel="shortcut icon" href="main/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="main/css/base.css" />
+	<link rel="stylesheet" type="text/css" href="main/css/page.css" />
+	<script>document.documentElement.className = "js"; var supportsCssVars = function () { var e, t = document.createElement("style"); return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e }; supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+</head>
+
+<body class="homepage" onload="run();" onresize="resize();">
+	<svg class="hidden">
+		<symbol id="icon-arrow" viewBox="0 0 24 24">
+			<title>arrow</title>
+			<polygon points="6.3,12.8 20.9,12.8 20.9,11.2 6.3,11.2 10.2,7.2 9,6 3.1,12 9,18 10.2,16.8 " />
+		</symbol>
+		<symbol id="icon-drop" viewBox="0 0 24 24">
+			<title>drop</title>
+			<path
+				d="M12,21c-3.6,0-6.6-3-6.6-6.6C5.4,11,10.8,4,11.4,3.2C11.6,3.1,11.8,3,12,3s0.4,0.1,0.6,0.3c0.6,0.8,6.1,7.8,6.1,11.2C18.6,18.1,15.6,21,12,21zM12,4.8c-1.8,2.4-5.2,7.4-5.2,9.6c0,2.9,2.3,5.2,5.2,5.2s5.2-2.3,5.2-5.2C17.2,12.2,13.8,7.3,12,4.8z" />
+			<path
+				d="M12,18.2c-0.4,0-0.7-0.3-0.7-0.7s0.3-0.7,0.7-0.7c1.3,0,2.4-1.1,2.4-2.4c0-0.4,0.3-0.7,0.7-0.7c0.4,0,0.7,0.3,0.7,0.7C15.8,16.5,14.1,18.2,12,18.2z" />
+		</symbol>
+	</svg>
+	<main>
+		<div class="content content--fixed">
+	
+			<button class="menu-trigger">+ Portfolio Cases</button>
+		</div>
+		<div id="content-1" class="content content--switch content--switch-current">
+			<canvas id="mobile"></canvas>
+			<h2 class="content__title">Portfolio Page</h2>
+			<div class="content__date">Small portfolio by COLD</div>
+			<div class="content__location">Kursk, RU</div>
+		</div>
+		<div id="content-2" class="content content--switch">
+			<h2 class="content__title">Ford promo</h2>
+			<p class="content__text">Created from scratch promo page for Moscow autodealer Kuntsevo, using bootstrap,
+				jq, jqplugins</p>
+			<a href="ford/index.html">Look at case</a>
+		</div>
+		<div id="content-3" class="content content--switch">
+			<h2 class="content__title">Volkswagen promo</h2>
+			<p class="content__text">Created from scratch promo page for Moscow autodealer Kuntsevo, using Volkswagen
+				styleguide, bootstrap, jq, jqplugins</p>
+			<a href="volkswagen/index.html">Look at case</a>
+		</div>
+		<div id="content-4" class="content content--switch">
+			<h2 class="content__title">LikeEn</h2>
+			<p class="content__text">Created from scratch website using Wordpress CMS, and online payment via yandex</p>
+			<a href="https://likeen.ru">Look at case</a>
+		</div>
+		<div id="content-5" class="content content--switch">
+			<h2 class="content__title">Maria Stalina</h2>
+			<p class="content__text">Reworked fron-end after developers (RPA group) fix some bugs, rework footer, mobile
+				version, add 404 page with ThreeJS, project developed on modx revolution.</p>
+			<a href="https://mariastalina.com/404">Look at case</a>
+		</div>
+		<div id="content-6" class="content content--switch">
+			<h2 class="content__title">Deep Space Demo</h2>
+			<p class="content__text">Small case with Threejs, with controls and postprocessing</p>
+			<a href="deep_space/index.html">Look at case</a>
+		</div>
+		<nav class="grim">
+			<div class="grim__item">
+				<div class="grim__item-bg grim__item-bg--1"></div>
+			</div>
+			<div class="grim__item">
+				<div class="grim__item-bg grim__item-bg--2"></div>
+			</div>
+			<div class="grim__item">
+				<div class="grim__item-bg grim__item-bg--3"></div>
+				<div class="grim__item-content">
+					<div class="grim__item-inner">
+						<button class="menu-trigger menu-trigger--close">- exit</button>
+					</div>
+				</div>
+			</div>
+			<div class="grim__item">
+				<div class="grim__item-bg grim__item-bg--4"></div>
+			</div>
+			<div class="grim__item">
+				<div class="grim__item-bg grim__item-bg--5"></div>
+				<a href="#content-1" id="home" class="grim__link grim__item-content">
+					<div class="grim__item-inner">
+						<h3 class="grim__item-title">HOME</h3>
+					</div>
+				</a>
+			</div>
+			<div class="grim__item">
+				<div class="grim__item-bg grim__item-bg--6"></div>
+				<a href="#content-2" id="about" class="grim__link grim__item-content">
+					<div class="grim__item-inner">
+						<h3 class="grim__item-title">Ford</h3>
+						<span class="grim__item-desc">Moscow autodealer.</span>
+					</div>
+				</a>
+			</div>
+			<div class="grim__item">
+				<div class="grim__item-bg grim__item-bg--7"></div>
+				<a href="#content-3" id="about" class="grim__link grim__item-content">
+					<div class="grim__item-inner">
+						<h3 class="grim__item-title">Volkswagen</h3>
+						<span class="grim__item-desc">Moscow autodealer</span>
+					</div>
+				</a>
+			</div>
+			<div class="grim__item">
+				<div class="grim__item-bg grim__item-bg--8"></div>
+				<a href="#content-5" id="about" class="grim__link grim__item-content">
+					<div class="grim__item-inner">
+						<h3 class="grim__item-title">Maria Stalina</h3>
+						<span class="grim__item-desc">Knives shop from St. Petersburg</span>
+					</div>
+				</a>
+			</div>
+			<div class="grim__item">
+				<div class="grim__item-bg grim__item-bg--9"></div>
+				<a href="#content-4" id="about" class="grim__link grim__item-content">
+					<div class="grim__item-inner">
+						<h3 class="grim__item-title">LikeEn</h3>
+						<span class="grim__item-desc">WordPress Project.</span>
+					</div>
+				</a>
+			</div>
+			<div class="grim__item">
+				<div class="grim__item-bg grim__item-bg--10" data-duration="1000" data-easing="easeOutQuint"></div>
+				<a href="#content-6" id="about" class="grim__link grim__item-content">
+					<div class="grim__item-inner">
+						<h3 class="grim__item-title">Deep Space</h3>
+						<span class="grim__item-desc">Small ThreeJs Project.</span>
+					</div>
+				</a>
+			</div>
+		</nav>
+		</div>
+	</main>
+	<div id="load"
+		style="left:0; top:0; position: fixed; z-index:10; width: 100vw; height: 100vh; background: #121212;">
+		<div id="logo" style="position:absolute; width:50%; left:25%; top:35%">
+			loading
+			<div
+				style="position:absolute; width:100%; height:24px; left:0%; top:120%; border-style:solid; border-color:#FFFFFF; border-width:2px">
+				<div id="bar"
+					style="position:absolute; width:0%; height:100%; left:0%; top:0%; background-color:#FFFFFF"></div>
+			</div>
+		</div>
+		<script src="main/js/homepage.js"></script>
+		<script src="main/js/anime.min.js"></script>
+		<script src="main/js/menu.js"></script>
+		<script type="text/javascript" src="main/js/three.min.js"></script>
+		<script type="text/javascript">
+			var app;
+			//Initialize app
+			function run() {
+				var isMobile = {
+					Android: function () {
+						return navigator.userAgent.match(/Android/i);
+					},
+					BlackBerry: function () {
+						return navigator.userAgent.match(/BlackBerry/i);
+					},
+					iOS: function () {
+						return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+					},
+					Opera: function () {
+						return navigator.userAgent.match(/Opera Mini/i);
+					},
+					Windows: function () {
+						return navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/WPDesktop/i);
+					},
+					any: function () {
+						return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+					}
+				};
+				//Create app object
+				canvas = document.getElementById("mobile");
+				if (!isMobile.any()) {
+					app = new ThreeApp();
+				}
+				if (isMobile.any()) {
+					app = new ThreeApp(canvas);
+				}
+				//Onload enable the vr and fullscreen buttons
+				var logo = document.getElementById("logo");
+				var onLoad = function () {
+					//Remove logo and loading bar
+					document.body.removeChild(load);
+				};
+				//On progress callback
+				//On progress callback
+				var bar = document.getElementById("bar");
+				var onProgress = function (event) {
+					if (event.lengthComputable) {
+						var progress = event.loaded / event.total * 100;
+						bar.style.width = progress + "%";
+					}
+				};
+				if (!isMobile.any()) {
+					app.loadRunProgram("main/js/app.pack", onLoad, onProgress);
+				}
+				if (isMobile.any()) {
+					app.loadRunProgram("main/js/mobile.pack", onLoad, onProgress);
+				}
+			}
+
+			//Resize app (must be called every time the window is resized)
+			function resize() {
+				app.resize();
+			}
+		</script>
+		<script>
+			console.clear();
+			var gohome = document.getElementById("home");
+			var goabout = document.querySelectorAll("#about")
+			gohome.addEventListener('click', function () { app.sendData(false) });
+			for (var i = 0; i < goabout.length; i++) {
+				goabout[i].addEventListener('click', function () { app.sendData(true); });
+			}
+		</script>
+</body>
+
+</html>
